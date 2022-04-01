@@ -145,10 +145,10 @@ print("*"*20)
 # pares = [2, 4, 6, 8, 10]
 # x = pares * 3
 # print(x)
-
-carnes = ["picanha", "alcatra", "filé mignon", "cupim"]
-x = carnes
-del (x[-1])
-
-print(carnes)
-print(x)
+#
+# carnes = ["picanha", "alcatra", "filé mignon", "cupim"]
+# x = carnes
+# del (x[-1])
+#
+# print(carnes)
+# print(x)
