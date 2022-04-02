@@ -24,7 +24,10 @@ def partida():
     n = int(input("Quantas peças? "))
     m = int(input("Limite de peças por jogador? "))
     compu = False
+    voce_comeca = 0
+    computador_comeca = 0
     if n % (m + 1) == 0:
+        
         print("Você começa!")
         usuario_escolhe_jogada(n, m)
     else:
