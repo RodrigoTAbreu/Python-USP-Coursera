@@ -1,11 +1,21 @@
+def soma_matrizes(m1, m2):
+    def dimensoes(A):
+        lin = len(A)
+        col = len(A[0])
+
+        return ((lin, col))
+
+    if dimensoes(m1) != dimensoes(m2):
+        return False
+    else:
+        matriz = []
+        for i in range(len(m1)):
+            linha = []
+            for j in range(len(m1[0])):
+                linha.append(m1[i][j] + m2[i][j])
+            matriz.append(linha)
+        return matriz
 
 m1 = [[1, 2, 3], [4, 5, 6]]
 m2 = [[2, 3, 4], [5, 6, 7]]
-
-if len(m1) == len(m2):
-    tam1 = len(m1)
-    tam2 = len(m2)
-    for i in range(tam1):
-        for j in range(tam2):
-            elemento1 = m1[i][j] + m2[i][j]
-            print(elemento1)
+soma_matrizes(m1, m2)
