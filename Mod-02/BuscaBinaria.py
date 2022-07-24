@@ -22,13 +22,16 @@ class Buscador:
         return -1
 
     def busca(self, lista, elemento):
-        for i in range(len(lista)):
+        primeiro = 0
+        ultimo = len(lista) - 1
+        while primeiro <= ultimo:
+            i  = int((primeiro + ultimo)/2)
+            print(i)
             if lista[i] == elemento:
-                return lista[i]
+                return i
+            elif lista[i] > elemento:
+                ultimo = i -1
+            elif lista[i] < elemento:
+                primeiro = i + 1
             else:
                 return False
-
-
-lista = [-100,0,20,30,50,100,3000,5000]
-b = Buscador()
-b.busca(lista, 100)

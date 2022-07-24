@@ -1,12 +1,14 @@
-n = int(input("Infome o valor a ser buscado: "))
-lista = [-100,0,20,30,50,100,3000,5000]
-
-
-for i in range(len(lista)):
-    if lista[i] == n:
-        print(lista[i])
-        #print(f'Encontrei o valor informado {n}. E está na posição {i}')
-        break
-    else:
-        print(f'{i}')
-
+def busca(self, lista, elemento):
+    primeiro = 0
+    ultimo = len(lista) - 1
+    while primeiro <= last:
+        i = int((primeiro + ultimo) / 2)
+        print(i)
+        if lista[i] == elemento:
+            return i
+        elif lista[i] > elemento:
+            ultimo = i - 1
+        elif lista[i] < elemento:
+            primeiro = i + 1
+        else:
+            return False
