@@ -21,17 +21,28 @@ class Buscador:
 
         return -1
 
+
     def busca(self, lista, elemento):
-        primeiro = 0
-        ultimo = len(lista) - 1
-        while primeiro <= ultimo:
-            i  = int((primeiro + ultimo)/2)
+        first = 0
+        last = len(lista) - 1
+
+        while first <= last:
+            i = int((first + last) / 2)
             print(i)
             if lista[i] == elemento:
-                return i
+                print(i)
+                #return i
             elif lista[i] > elemento:
-                ultimo = i -1
+                last = i - 1
             elif lista[i] < elemento:
-                primeiro = i + 1
+                first = i + 1
             else:
-                return False
+                print('False')
+                #return False
+
+        print('False')
+        #return False
+
+a = Buscador()
+lista = [1,3,2,5,6,9,87]
+a.busca(lista, 5)
